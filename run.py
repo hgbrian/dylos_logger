@@ -17,7 +17,7 @@ while True:
         ser = None
         data = None
 
-    if len(data) > 0:
+    if data is not None and len(data) > 0:
         message_id = topic.publish(data.encode('utf-8').strip())
         print("data:", message_id, data.strip())
 
